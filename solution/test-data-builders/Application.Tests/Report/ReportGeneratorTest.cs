@@ -83,8 +83,8 @@ namespace Application.Tests.Report
                     .Containing(
                         AnInvoice()
                             .Containing(
-                                ANovel(_ => _.Costing(12.99)).InQuantity(2),
-                                AnEducationalBook(_ => _.Costing(29.87)).InQuantity(7)
+                                ANovel(novel => novel.Costing(12.99)).InQuantity(2),
+                                AnEducationalBook(educationalBook => educationalBook.Costing(29.87)).InQuantity(7)
                             )
                             .From(France)
                     )
