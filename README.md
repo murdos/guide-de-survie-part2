@@ -8,12 +8,19 @@ Par "sauver des vies", j’entends permettre aux développeur·euses d’être e
 
 Ainsi nous creuserons ensemble :
 
+- [Le Property-Based Testing](#property-based-testing)
 - [Les communautés de pratique](#communautés-de-pratique)
 - [Le Mutation Testing](#mutation-testing)
 - [Test Data Builders](#test-data-builders)
 - [Les Xtrems (Reading, Watch)](#xtrems)
 
 Vous repartirez avec le plein d’envie d’expérimentation et d’idées.
+
+## Property-Based Testing
+![Property-Based Testing](img/pbt.webp)
+
+### Vidéo - un cas d'école pour le Property-Based Testing
+[![A case study for PBT](img/use-case-pbt-video.webp)](https://youtu.be/cuJQalf-tps "A case study for Property-Based Testing")
 
 ## Communautés de pratique
 ![Communautés de pratique](img/cop.webp)
