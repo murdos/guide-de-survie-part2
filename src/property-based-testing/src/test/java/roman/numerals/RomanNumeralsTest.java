@@ -1,5 +1,9 @@
 package roman.numerals;
 
+import net.jqwik.api.ForAll;
+import net.jqwik.api.Property;
+import net.jqwik.api.constraints.IntRange;
+import net.jqwik.api.constraints.Negative;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.Arguments;
@@ -40,5 +44,15 @@ class RomanNumeralsTest {
         assertThat(convert(number))
                 .isPresent()
                 .contains(expectedRoman);
+    }
+
+    @Property
+    void romanNumberContainsOnlyValidCharacters(@ForAll @IntRange(min = 1, max = 2499) int number) {
+        assertThat(convert(number)).hasValueSatisfying(roman -> assertThat(roman).matches("[IVXLCDM]+"));
+    }
+
+    @Property
+    void romanNumberIsEmptyForNegativeValue(@ForAll @Negative int number) {
+        assertThat(convert(number)).isEmpty();
     }
 }
